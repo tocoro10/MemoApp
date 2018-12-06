@@ -25,7 +25,7 @@ class MemoDetailScreen extends React.Component{
                     </Text>
                 </View>
 
-                <CircleButton color="white" style={styles.editButton}>+</CircleButton>
+                <CircleButton name ="pencil" color="white" style={styles.editButton}/>
 
             </View>
         );
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         padding:10,
     },
     memoHeaderTitle:{
-        fontSize:20,
+        fontSize:2,
         fontWeight:'bold',
         color:'#fff',
         marginBottom:4,
