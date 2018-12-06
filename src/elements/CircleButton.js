@@ -7,9 +7,19 @@ import {
 
 class CircleButton extends React.Component{
     render(){
+        const {style, color} = this.props;
+
+        let bgColor ='#e31671';
+        let textColor='#fff';
+        
+        if(color === 'white'){
+            bgColor = '#fff';
+            textColor = '#e31671';
+        }
+
         return(
-            <View style={styles.circleButton}>
-                <Text style ={styles.circleButtonTittle}>
+            <View style={[styles.circleButton, style, {backgroundColor:bgColor}]}>
+                <Text style ={[styles.circleButtonTittle, {color:textColor}]}>
                     {this.props.children}
                 </Text>
             </View> 
