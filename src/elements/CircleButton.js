@@ -3,6 +3,7 @@ import {
     StyleSheet,
     View,
     Text,
+    TouchableHighlight,
 } from 'react-native';
 import {Font} from 'expo';
 import { createIconSet } from '@expo/vector-icons';
@@ -37,25 +38,32 @@ class CircleButton extends React.Component{
         }
 
         return(
-            <View style={[styles.circleButton, style, {backgroundColor:bgColor}]}>
-            {
-                this.state.fontLoaded ?(
-                    <CustomIcon name={name} style ={[styles.circleButtonTittle, {color:textColor}]}/>
-                ):null
-            }
-            </View> 
+            <TouchableHighlight style={[styles.container,style]} onPress={this.props.onPress} underlayColor="transparent">
+                <View style={[styles.circleButton, {backgroundColor:bgColor}]}>
+                {
+                    this.state.fontLoaded ?(
+                        <CustomIcon name={name} style ={[styles.circleButtonTittle, {color:textColor}]}/>
+                    ):null
+                }
+                </View> 
+            </TouchableHighlight>
         );
     }
 }
 
+
+
 const styles=StyleSheet.create({
-    circleButton:{
+    container:{
+        width:48,
+        height:48,
         position:'absolute',
         bottom:32,
         right:32,
+    },
+    circleButton:{
         width:48,
         height:48,
-        backgroundColor:'#e31671',
         borderRadius:24,
         justifyContent:'center',
         alignItems:'center',
@@ -68,7 +76,6 @@ const styles=StyleSheet.create({
         fontFamily:'FontAwsome',
         fontSize:24,
         lineHeight:32,
-        color:'#fff',
       },
 })
 

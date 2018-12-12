@@ -3,31 +3,37 @@ import {
     StyleSheet,
     View,
     Text,
+    TouchableHighlight,
 } from 'react-native';
 
 class MemoList extends React.Component{
     render(){
         return(
              <View style={styles.memoList}>
+             <TouchableHighlight onPress={()=>{this.props.navigation.navigate('MemoDetail')}}>
                 <View style={styles.memoListItems}>
-                <Text style={styles.memoTittle}>口座内容</Text>
-                <Text style={styles.memoDate}>2018/11/29</Text>
+                  <Text style={styles.memoTittle}>口座内容</Text>
+                  <Text style={styles.memoDate}>2018/11/29</Text>
                 </View>
-
+             </TouchableHighlight>
+             <TouchableHighlight onPress={()=>{this.props.navigation.navigate('MemoDetail')}}>
                 <View style={styles.memoListItems}>
-                <Text style={styles.memoTittle}>手順確認</Text>
-                <Text style={styles.memoDate}>2018/11/29</Text>
+                  <Text style={styles.memoTittle}>口座内容</Text>
+                  <Text style={styles.memoDate}>2018/11/29</Text>
                 </View>
-
+             </TouchableHighlight>
+             <TouchableHighlight onPress={()=>{this.props.navigation.navigate('MemoDetail')}}>
                 <View style={styles.memoListItems}>
-                <Text style={styles.memoTittle}>内容精査</Text>
-                <Text style={styles.memoDate}>2018/11/29</Text>
+                  <Text style={styles.memoTittle}>口座内容</Text>
+                  <Text style={styles.memoDate}>2018/11/29</Text>
                 </View>
-
+             </TouchableHighlight>
+             <TouchableHighlight onPress={()=>{this.props.navigation.navigate('MemoDetail')}}>
                 <View style={styles.memoListItems}>
-                <Text style={styles.memoTittle}>買い物</Text>
-                <Text style={styles.memoDate}>2018/11/29</Text>
+                  <Text style={styles.memoTittle}>口座内容</Text>
+                  <Text style={styles.memoDate}>2018/11/29</Text>
                 </View>
+             </TouchableHighlight>
           </View>
        );
     }
