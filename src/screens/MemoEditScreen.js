@@ -31,10 +31,9 @@
                 body:this.state.body,
             })
             .then(()=>{
-                console.log(success);
+                this.props.navigation.goBack();
             })
-            .catch((error)=>{
-                console.log(error);
+            .catch(()=>{
             });
         }
 
